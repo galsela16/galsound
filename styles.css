@@ -1,20 +1,20 @@
 /* ==========================================================================
    גל הגברה ותאורה — Design tokens
-   Palette: near-black stage + amber / magenta / cyan gel washes
+   Palette: teal / navy / black / white — matches the גל logo mark
    Type: Suez One (display) + Heebo (body/UI)
-   Signature: sweeping light-beam hero + equalizer-bar dividers
+   Signature: fader/equalizer-bar motif echoing the logo
    ========================================================================== */
 
 :root {
-  --bg: #faf6ef;
+  --bg: #f7fbfa;
   --bg-elev: #ffffff;
-  --bg-elev-2: #f2ece0;
-  --ink: #1a1720;
-  --ink-dim: #6b6672;
-  --amber: #e6900a;
-  --magenta: #d81b64;
-  --cyan: #0a9aa0;
-  --line: rgba(26, 23, 32, 0.1);
+  --bg-elev-2: #e7f4f2;
+  --ink: #0b1320;
+  --ink-dim: #57636a;
+  --teal: #2f8f86;
+  --teal-soft: #73c2bd;
+  --teal-deep: #4d8d86;
+  --line: rgba(11, 19, 32, 0.1);
 
   --font-display: "Suez One", "Heebo", serif;
   --font-body: "Heebo", sans-serif;
@@ -68,7 +68,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   gap: 10px;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
-  color: var(--amber);
+  color: var(--teal);
   font-weight: 500;
   margin-bottom: 14px;
 }
@@ -76,7 +76,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--amber);
+  background: var(--teal);
   display: inline-block;
 }
 
@@ -102,20 +102,20 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 }
 .btn:hover { transform: translateY(-2px); }
 .btn:focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--teal-soft);
   outline-offset: 3px;
 }
 .btn-primary {
-  background: var(--amber);
-  color: #17130a;
+  background: var(--teal);
+  color: #ffffff;
 }
-.btn-primary:hover { background: #ffc657; }
+.btn-primary:hover { background: #256f68; }
 .btn-ghost {
   background: transparent;
   border-color: var(--line);
   color: var(--ink);
 }
-.btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+.btn-ghost:hover { border-color: var(--teal-soft); color: var(--teal-soft); }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
@@ -143,8 +143,8 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 }
 .logo span.dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--magenta);
-  box-shadow: 0 0 12px 2px var(--magenta);
+  background: var(--teal-deep);
+  box-shadow: 0 0 12px 2px var(--teal-deep);
 }
 .logo small {
   font-family: var(--font-body);
@@ -174,7 +174,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   position: absolute;
   bottom: -2px; right: 0; left: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--amber), var(--magenta));
+  background: linear-gradient(90deg, var(--teal), var(--teal-deep));
 }
 
 .nav-cta { display: flex; align-items: center; gap: 14px; }
@@ -208,9 +208,9 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   content: "";
   position: absolute; inset: 0;
   background:
-    radial-gradient(60% 50% at 20% 15%, rgba(230,144,10,0.20), transparent 60%),
-    radial-gradient(55% 45% at 85% 10%, rgba(216,27,100,0.16), transparent 60%),
-    radial-gradient(60% 60% at 60% 100%, rgba(10,154,160,0.14), transparent 60%);
+    radial-gradient(60% 50% at 20% 15%, rgba(115,194,189,0.35), transparent 60%),
+    radial-gradient(55% 45% at 85% 10%, rgba(47,143,134,0.16), transparent 60%),
+    radial-gradient(60% 60% at 60% 100%, rgba(77,141,134,0.14), transparent 60%);
   z-index: -2;
 }
 .beams {
@@ -229,9 +229,9 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   transform-origin: top center;
   animation: sway 9s ease-in-out infinite;
 }
-.beam.b1 { left: 8%;  background: linear-gradient(180deg, rgba(255,182,39,0.35), transparent 70%); animation-delay: 0s; }
-.beam.b2 { left: 38%; background: linear-gradient(180deg, rgba(255,59,121,0.30), transparent 70%); animation-delay: -3s; transform: rotate(6deg); }
-.beam.b3 { left: 68%; background: linear-gradient(180deg, rgba(51,225,232,0.28), transparent 70%); animation-delay: -6s; transform: rotate(-8deg); }
+.beam.b1 { left: 8%;  background: linear-gradient(180deg, rgba(115,194,189,0.45), transparent 70%); animation-delay: 0s; }
+.beam.b2 { left: 38%; background: linear-gradient(180deg, rgba(47,143,134,0.30), transparent 70%); animation-delay: -3s; transform: rotate(6deg); }
+.beam.b3 { left: 68%; background: linear-gradient(180deg, rgba(77,141,134,0.28), transparent 70%); animation-delay: -6s; transform: rotate(-8deg); }
 @keyframes sway {
   0%, 100% { transform: rotate(-9deg); }
   50% { transform: rotate(9deg); }
@@ -241,7 +241,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 .hero h1 { margin-bottom: 22px; }
 .hero h1 em {
   font-style: normal;
-  background: linear-gradient(90deg, var(--amber), var(--magenta));
+  background: linear-gradient(90deg, var(--teal), var(--teal-deep));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -274,12 +274,12 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 .eq-divider span {
   width: 4px;
   border-radius: 2px;
-  background: linear-gradient(180deg, var(--amber), var(--magenta));
+  background: linear-gradient(180deg, var(--teal), var(--teal-deep));
   animation: eq 1.4s ease-in-out infinite;
 }
 .eq-divider span:nth-child(1) { height: 40%; animation-delay: -1.1s; }
 .eq-divider span:nth-child(2) { height: 70%; animation-delay: -0.4s; }
-.eq-divider span:nth-child(3) { height: 100%; animation-delay: -0.9s; background: linear-gradient(180deg, var(--cyan), var(--magenta)); }
+.eq-divider span:nth-child(3) { height: 100%; animation-delay: -0.9s; background: linear-gradient(180deg, var(--teal-soft), var(--teal-deep)); }
 .eq-divider span:nth-child(4) { height: 60%; animation-delay: -0.2s; }
 .eq-divider span:nth-child(5) { height: 85%; animation-delay: -0.6s; }
 .eq-divider span:nth-child(6) { height: 35%; animation-delay: -1.3s; }
@@ -312,10 +312,10 @@ section { padding: 108px 0; }
   padding: 30px 26px;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+.card:hover { border-color: var(--teal-soft); transform: translateY(-4px); }
 .card .icon-bar {
   width: 34px; height: 3px;
-  background: var(--amber);
+  background: var(--teal);
   margin-bottom: 20px;
 }
 .card h3 { margin-bottom: 10px; }
@@ -344,7 +344,7 @@ section { padding: 108px 0; }
 .split .media::after {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(255,182,39,0.12), transparent 55%);
+  background: radial-gradient(circle at 30% 20%, rgba(115,194,189,0.18), transparent 55%);
 }
 
 /* ---------- Image placeholder (for gallery, pre-photos) ---------- */
@@ -394,13 +394,13 @@ section { padding: 108px 0; }
 .contact-list li:first-child { padding-top: 0; }
 .contact-tag {
   font-size: 0.72rem;
-  color: var(--amber);
+  color: var(--teal);
   letter-spacing: 0.05em;
   display: block;
   margin-bottom: 4px;
 }
 .contact-value { font-size: 1.15rem; }
-.contact-list a.contact-value:hover { color: var(--cyan); }
+.contact-list a.contact-value:hover { color: var(--teal-soft); }
 
 /* ---------- Footer ---------- */
 .site-footer {
