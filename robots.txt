@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://galsela16.github.io/galsound/sitemap.xml
