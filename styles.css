@@ -198,7 +198,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 /* ---------- Hero with sweeping light beams ---------- */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   padding-top: var(--nav-h);
@@ -291,8 +291,8 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
 }
 
 /* ---------- Sections ---------- */
-section { padding: 108px 0; }
-.section-head { max-width: 620px; margin: 0 auto 56px; text-align: center; }
+section { padding: 64px 0; }
+.section-head { max-width: 620px; margin: 0 auto 36px; text-align: center; }
 .section-head p { margin: 0 auto; }
 
 /* ---------- Service / feature cards ---------- */
@@ -438,7 +438,7 @@ section { padding: 108px 0; }
   .split { gap: 36px; }
   .nav-links, .nav-cta .btn-ghost { display: none; }
   .nav-toggle { display: flex; }
-  section { padding: 76px 0; }
+  section { padding: 48px 0; }
 }
 
 @media (max-width: 560px) {
