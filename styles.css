@@ -368,6 +368,9 @@ section { padding: 64px 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.gallery-grid .frame { aspect-ratio: 4 / 3; padding: 0; overflow: hidden; border-style: solid; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; transition: transform 0.35s ease; }
+.gallery-grid .frame:hover img { transform: scale(1.035); }
 
 /* ---------- Quote / testimonial-style band ---------- */
 .band {
@@ -523,13 +526,13 @@ body { background: var(--bg); color: var(--ink); }
   background:
     linear-gradient(270deg, rgba(5, 11, 15, 0.98) 0%, rgba(5, 11, 15, 0.87) 38%, rgba(5, 11, 15, 0.28) 100%),
     linear-gradient(0deg, rgba(5, 11, 15, 0.58), transparent 54%),
-    url("images/IMG_5866.jpg") center 47% / cover no-repeat;
+    url("images/event-colorful-show.jpg") center 47% / cover no-repeat;
 }
 .hero-rentals::before {
   background:
     linear-gradient(270deg, rgba(5, 11, 15, 0.96) 0%, rgba(5, 11, 15, 0.74) 48%, rgba(5, 11, 15, 0.22) 100%),
     linear-gradient(0deg, rgba(5, 11, 15, 0.48), transparent 58%),
-    url("images/IMG_6221.jpg") center 46% / cover no-repeat;
+    url("images/event-live-beams.jpg") center 46% / cover no-repeat;
 }
 .hero-inner { width: 100%; max-width: 1160px; padding-inline: 24px; z-index: 1; }
 .hero h1 { max-width: 760px; text-shadow: 0 3px 28px rgba(0, 0, 0, 0.25); }
