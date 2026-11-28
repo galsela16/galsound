@@ -226,7 +226,7 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   width: 240px;
   height: 140%;
   background: linear-gradient(180deg, rgba(26,23,32,0.10), transparent 70%);
-  filter: blur(6px);
+  filter: blur(4px);
   transform-origin: top center;
   animation: sway 9s ease-in-out infinite;
 }
@@ -479,11 +479,11 @@ section { padding: 64px 0; }
 
 /* ===== 2026 visual refresh: midnight stage palette ===== */
 :root {
-  --bg: #071116;
-  --bg-elev: #0d1a21;
-  --bg-elev-2: #14262d;
+  --bg: #0a1920;
+  --bg-elev: #11232b;
+  --bg-elev-2: #172e38;
   --ink: #f2f8f8;
-  --ink-dim: #acbcc0;
+  --ink-dim: #b8c8cd;
   --teal: #42d7c6;
   --teal-soft: #92f1e5;
   --teal-deep: #187d78;
@@ -494,6 +494,12 @@ section { padding: 64px 0; }
 }
 
 body { background: var(--bg); color: var(--ink); }
+main {
+  background-image:
+    radial-gradient(ellipse at 12% 9%, rgba(56, 194, 215, 0.11), transparent 30%),
+    radial-gradient(ellipse at 88% 54%, rgba(45, 205, 177, 0.09), transparent 27%),
+    linear-gradient(114deg, transparent 0%, rgba(99, 232, 232, 0.025) 18.8%, rgba(99, 232, 232, 0.065) 19.1%, transparent 19.6%, transparent 58%, rgba(76, 203, 223, 0.045) 58.3%, transparent 59%);
+}
 .site-header {
   background: rgba(7, 17, 22, 0.88);
   border-bottom-color: var(--line);
@@ -540,7 +546,7 @@ body { background: var(--bg); color: var(--ink); }
 .hero-lead { color: #d1dddd; max-width: 590px; }
 .hero .eyebrow { color: var(--teal-soft); }
 .hero .eyebrow::before { background: var(--teal); }
-.beams { opacity: 0.32; }
+.beams { opacity: 0.48; mix-blend-mode: screen; }
 .beam.b1 { background: linear-gradient(180deg, rgba(94, 236, 216, 0.32), transparent 72%); }
 .beam.b2 { background: linear-gradient(180deg, rgba(56, 199, 189, 0.24), transparent 72%); }
 .beam.b3 { background: linear-gradient(180deg, rgba(91, 161, 201, 0.2), transparent 72%); }
