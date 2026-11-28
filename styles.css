@@ -142,6 +142,14 @@ p { margin: 0 0 1em; color: var(--ink-dim); }
   align-items: center;
   gap: 8px;
 }
+.logo img {
+  display: block;
+  width: 108px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
 .logo span.dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--teal-deep);
@@ -591,6 +599,7 @@ section { padding: clamp(58px, 7vw, 88px) 0; }
   }
 }
 @media (max-width: 560px) {
+  .logo img { width: 88px; height: 58px; }
   .container { padding-inline: 20px; }
   .hero { min-height: 70svh; }
   .hero-inner { padding-inline: 20px; }
