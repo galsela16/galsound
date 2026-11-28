@@ -738,3 +738,26 @@ main {
   .about-hero-visual { aspect-ratio: 1.08; border-radius: 16px; }
   .about-hero-caption { inset-inline-start: 16px; bottom: 14px; font-size: 0.82rem; }
 }
+
+
+/* Match every button to the logo's exact aqua tone. */
+:root { --logo-teal: #73c2bd; }
+.btn-primary {
+  background: var(--logo-teal);
+  color: #071516;
+  box-shadow: 0 8px 26px rgba(115, 194, 189, 0.18);
+}
+.btn-primary:hover {
+  background: #67b5b0;
+  box-shadow: 0 12px 30px rgba(115, 194, 189, 0.28);
+}
+.btn-ghost {
+  color: var(--logo-teal);
+  border-color: rgba(115, 194, 189, 0.52);
+  background: rgba(115, 194, 189, 0.08);
+}
+.btn-ghost:hover {
+  color: #071516;
+  border-color: var(--logo-teal);
+  background: var(--logo-teal);
+}
