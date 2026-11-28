@@ -598,3 +598,50 @@ section { padding: clamp(58px, 7vw, 88px) 0; }
   .hero-actions .btn { padding: 13px 21px; }
   .card { padding: 26px 22px; }
 }
+
+
+/* Stronger stage lighting: visible light shafts continue through the page. */
+:root {
+  --bg: #0c1e26;
+  --bg-elev: #142831;
+  --bg-elev-2: #1a3540;
+}
+main > section:not(.hero) {
+  position: relative;
+  isolation: isolate;
+}
+main > section:not(.hero)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(56, 206, 230, 0.17), transparent 43%),
+    linear-gradient(116deg, transparent 15%, rgba(56, 198, 235, 0.08) 18.4%, rgba(152, 255, 250, 0.26) 18.8%, rgba(61, 202, 230, 0.12) 19.3%, transparent 22.5%),
+    linear-gradient(68deg, transparent 68%, rgba(52, 182, 233, 0.08) 70.1%, rgba(155, 246, 255, 0.22) 70.5%, rgba(52, 182, 233, 0.09) 71%, transparent 73.2%);
+}
+.beams { opacity: 0.82; }
+.beam {
+  width: clamp(150px, 19vw, 250px);
+  filter: blur(2px);
+}
+.beam.b1 { background: linear-gradient(180deg, rgba(102, 252, 230, 0.62), rgba(65, 220, 210, 0.16) 36%, transparent 78%); }
+.beam.b2 { background: linear-gradient(180deg, rgba(81, 206, 255, 0.52), rgba(59, 170, 230, 0.14) 38%, transparent 78%); }
+.beam.b3 { background: linear-gradient(180deg, rgba(181, 127, 255, 0.38), rgba(91, 188, 235, 0.12) 40%, transparent 80%); }
+.beam::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 13px;
+  height: 84%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(237, 255, 253, 0.78), rgba(125, 246, 239, 0.42) 26%, rgba(97, 218, 239, 0.18) 58%, transparent);
+  filter: blur(4px);
+  box-shadow: 0 0 32px 10px rgba(77, 221, 231, 0.24);
+}
+@media (prefers-reduced-motion: reduce) {
+  .beam { animation: none; }
+}
