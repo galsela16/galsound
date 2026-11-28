@@ -498,7 +498,8 @@ main {
   background-image:
     radial-gradient(ellipse at 12% 9%, rgba(56, 194, 215, 0.11), transparent 30%),
     radial-gradient(ellipse at 88% 54%, rgba(45, 205, 177, 0.09), transparent 27%),
-    linear-gradient(114deg, transparent 0%, rgba(99, 232, 232, 0.025) 18.8%, rgba(99, 232, 232, 0.065) 19.1%, transparent 19.6%, transparent 58%, rgba(76, 203, 223, 0.045) 58.3%, transparent 59%);
+    linear-gradient(112deg, transparent 18%, rgba(48, 190, 220, 0.035) 20.8%, rgba(137, 244, 249, 0.19) 21.2%, rgba(48, 190, 220, 0.07) 21.7%, transparent 24.8%),
+    linear-gradient(68deg, transparent 70%, rgba(52, 182, 233, 0.035) 72%, rgba(155, 246, 255, 0.16) 72.4%, rgba(52, 182, 233, 0.06) 72.9%, transparent 76%);
 }
 .site-header {
   background: rgba(7, 17, 22, 0.88);
@@ -568,7 +569,7 @@ section { padding: clamp(58px, 7vw, 88px) 0; }
 .split .media { background: var(--bg-elev-2); border-color: var(--line); }
 .frame { background: var(--bg-elev); border-color: var(--line); color: var(--ink-dim); border-radius: var(--radius); }
 .band {
-  background: radial-gradient(75% 140% at 50% 0%, rgba(37, 129, 125, 0.14), transparent 70%), var(--bg-elev);
+  background: radial-gradient(75% 140% at 50% 0%, rgba(37, 129, 125, 0.18), transparent 70%), rgba(20, 40, 49, 0.72);
   border-color: var(--line);
 }
 .contact-list li { border-color: var(--line); }
@@ -606,21 +607,7 @@ section { padding: clamp(58px, 7vw, 88px) 0; }
   --bg-elev: #142831;
   --bg-elev-2: #1a3540;
 }
-main > section:not(.hero) {
-  position: relative;
-  isolation: isolate;
-}
-main > section:not(.hero)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse at 12% 8%, rgba(56, 206, 230, 0.17), transparent 43%),
-    linear-gradient(116deg, transparent 15%, rgba(56, 198, 235, 0.08) 18.4%, rgba(152, 255, 250, 0.26) 18.8%, rgba(61, 202, 230, 0.12) 19.3%, transparent 22.5%),
-    linear-gradient(68deg, transparent 68%, rgba(52, 182, 233, 0.08) 70.1%, rgba(155, 246, 255, 0.22) 70.5%, rgba(52, 182, 233, 0.09) 71%, transparent 73.2%);
-}
+/* Site-wide beams are painted once on <main>, so they continue across sections. */
 .beams { opacity: 0.82; }
 .beam {
   width: clamp(150px, 19vw, 250px);
